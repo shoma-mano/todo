@@ -1,0 +1,101 @@
+.noteContainer{
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+    color:#78ACD5;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+.noteContainer h1{
+    font-size: 16px;
+}
+
+.backLogsTitle{
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+}
+
+.noteContainer li{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    line-height: 50px;
+    margin: 0;
+    height: 50px;
+    width: 90%;
+    background: #181818;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 5px;
+}
+
+.noteContainer ul {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.taskNameWrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 10px;
+    justify-content: center;
+}
+.runTaskNameWrapper {
+    border-left: 2px solid white;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 10px;
+    justify-content: center;
+}
+
+.taskNameWrapper span {
+    border-left: 2px solid white;
+    height: 70%;
+    width: 100%;
+    padding-left: 8px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.taskCostWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.newButton {
+    width: 100px !important;
+    height: 30px !important;
+    font-size: 15px !important;
+    border: none !important;
+    margin-top: 70px;
+}
+
+.newButton span {
+    border:none !important;
+    padding: 0 !important;
+    text-align: center !important;
+    justify-content: center;
+}
+
+.completeButton {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    border: #7b7b7b 2px solid;
+    margin-right: 5px;
+    background: none;
+}

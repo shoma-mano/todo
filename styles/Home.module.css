@@ -1,15 +1,22 @@
 .container {
-  padding: 0 2rem;
+  padding: 0;
+}
+
+.body {
+  margin: 0;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 0rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background: url("/background.png");
+  background-size: cover;
 }
 
 .footer {
@@ -28,8 +35,17 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
+.titleWrapper{
+  position: absolute;
+  top: 35vh;
+  left: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title img {
+  color: white;
   text-decoration: none;
 }
 

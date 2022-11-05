@@ -1,0 +1,104 @@
+.menuContainer
+    height: 100%
+    width: 100%
+    text-align: center
+    color: #78ACD5
+    font-size: 16px
+    list-style-type: none
+    display: flex
+    justify-content: start
+    align-items: center
+    flex-direction: column
+    gap: 50px
+
+.menuItemContainer
+    display: flex
+    flex-direction: column
+    gap: 15px
+    align-items: center
+    width: 100%
+    margin-top: 10px
+
+.menuItem
+    width: 90%
+    background: #181818
+    font-size: 15px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    height: 48px
+    padding: 5px
+
+.dateInput
+    gap: 10px
+    display: flex
+    input
+        width: 50px
+
+.invalidForm
+    border: 1px solid red !important
+
+.invalidButton
+    opacity: 0.8
+
+.menuItem span
+    display: flex
+    line-height: 35px
+    color: white
+    font-size: 18px
+    margin-left: 10px
+    font-family: system-ui
+
+
+.menuItem input
+    background: #181818
+    text-align: center
+    border-radius: 10px
+    border: 1px solid #575555
+    color: white
+
+.priorityButtonContainer
+    display: flex
+    align-items: center
+    gap: 20px
+    margin-right: 20px
+    div
+        cursor: pointer
+
+@mixin priorityButton($color)
+    width: 20px
+    height: 20px
+    border-radius: 40px
+    background: $color
+    border: none
+
+
+.priorityLowButton
+    +priorityButton($color: #78ACD5)
+
+.priorityMediumButton
+    +priorityButton($color: #FCF302)
+
+.priorityHighButton
+    +priorityButton($color: #FF2460)
+
+.priorityButtonActive
+    border: 3px solid white
+    width: 18px
+    height: 18px
+    padding: 0
+    box-sizing: content-box
+
+.saveButton
+    width: 90%
+    font-size: 25px
+    line-height: 36px
+    display: flex
+    flex-direction: row
+    justify-content: center
+    height: 48px
+    padding: 5px
+    border-radius: 10px
+    border: 1px solid #575555
+    color: white
+    font-family: system-ui
