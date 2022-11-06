@@ -25,6 +25,7 @@ a {
   }
   body {
     color: white;
+    /*margin: 0;*/
     background: black;
   }
 }

@@ -1,15 +1,15 @@
 'use client'
 import s from "./NewNote.module.sass";
-import {useState} from "react";
-import {todoListAtom} from "../../../store/todoAtom";
-import {useAtom} from "jotai";
-import {CoolButton} from "../../../components/CoolButton/CoolButton";
-import {FlashIcon} from "../../../components/Icon/FlashIcon";
-import {useRouter} from "next/navigation";
-import {useForm} from "./useForm";
+import { useState } from "react";
+import { readWriteTodoListAtom } from "../../../store/todoAtom";
+import { useAtom } from "jotai";
+import { CoolButton } from "../../../components/CoolButton/CoolButton";
+import { useRouter } from "next/navigation";
+import { useForm } from "./useForm";
+import { useFlashIconGroup } from "../../../components/FlashIconGroup/useFlashIconGroup";
 
 const NewNote = () => {
-    const [todoList, setTodoList] = useAtom(todoListAtom);
+    const [todoList, setTodoList] = useAtom(readWriteTodoListAtom);
     const {
         date,
         isDayValid,
@@ -21,7 +21,7 @@ const NewNote = () => {
         validate
     } = useForm()
     const [priority, setPriority] = useState<1 | 2 | 3>(1);
-    const [energyCost, setEnergyCost] = useState<1 | 2 | 3>(1);
+    const { FlashIconGroup, energyCost } = useFlashIconGroup({isChangeable: true});
     const router = useRouter();
 
     const addTask = () => {
@@ -58,11 +58,11 @@ const NewNote = () => {
                     <div className={s.menuItem}>
                         <span>Date</span>
                         <div className={s.dateInput}>
-                            <input className={`${isMonthValid ? '' : s.invalidForm}`} name={'month'}
+                            <input autoComplete={'off'} className={`${isMonthValid ? '' : s.invalidForm}`} name={'month'}
                                    onInput={onDateHandleChange} type={"number"}
                                    placeholder={'MM'}>
                             </input>
-                            <input className={`${isDayValid ? '' : s.invalidForm}`} name={'day'}
+                            <input autoComplete={'off'} className={`${isDayValid ? '' : s.invalidForm}`} name={'day'}
                                    onInput={onDateHandleChange} type={"number"}
                                    placeholder={'DD'}>
                             </input>
@@ -73,30 +73,21 @@ const NewNote = () => {
                         <div className={s.priorityButtonContainer}>
                             {priorityButtonClassNames.map((className, index) => {
                                 return (
-                                    <button key={index}
-                                            className={`${className} ${priority === index + 1 ? s.priorityButtonActive : ""}`}
-                                            onClick={() => setPriority((index + 1) as 1 | 2 | 3)}></button>
+                                    <button
+                                        key={index}
+                                        className={`${className} ${priority === index + 1 ? s.priorityButtonActive : ""}`}
+                                        onClick={() => setPriority((index + 1) as 1 | 2 | 3)}>
+                                    </button>
                                 )
                             })}
                         </div>
                     </div>
                     <div className={s.menuItem}>
                         <span>Energy costs</span>
-                        <div className={s.priorityButtonContainer}>
-                            {[1, 2, 3].map((cost, index) => {
-                                return (
-                                    <div key={index} onClick={() => setEnergyCost((index + 1) as 1 | 2 | 3)}>
-                                        <FlashIcon color={index + 1 <= energyCost ? '#78ACD5' : '#464646'}
-                                        ></FlashIcon>
-                                    </div>
-                                )
-                            })}
-                        </div>
+                        <FlashIconGroup/>
                     </div>
                 </div>
-                <CoolButton disabled={!isAllValid} text={'SAVE'}
-                            className={`${s.saveButton} ${isAllValid ? '' : s.invalidButton}`}
-                            onClick={addTask}></CoolButton>
+                <CoolButton text={'SAVE'} className={`${s.saveButton} ${isAllValid ? '' : s.invalidButton}`} onClick={addTask}/>
             </div>
         </>
     )

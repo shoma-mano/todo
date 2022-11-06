@@ -2,11 +2,15 @@
     height: 100%;
     width: 100%;
     flex-grow: 1;
-    justify-content: center;
     text-align: center;
     color:#78ACD5;
     font-size: 16px;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: black;
 }
 
 .noteContainer h1{
@@ -16,7 +20,7 @@
 .backLogsTitle{
     font-size: 16px;
     color: white;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .noteContainer li{
@@ -50,13 +54,25 @@
     padding-left: 10px;
     justify-content: center;
 }
+
 .runTaskNameWrapper {
-    border-left: 2px solid white;
     display: flex;
     align-items: center;
     height: 100%;
     padding-left: 10px;
     justify-content: center;
+}
+
+.priorityLow {
+    border-left: 2px solid #78ACD5;
+}
+
+.priorityMedium {
+    border-left: 2px solid #FCF302;
+}
+
+.priorityHigh {
+    border-left: 2px solid #FF2460;
 }
 
 .taskNameWrapper span {
@@ -78,10 +94,10 @@
 
 .newButton {
     width: 100px !important;
-    height: 30px !important;
-    font-size: 15px !important;
+    height: 50px !important;
+    font-size: 20px !important;
     border: none !important;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .newButton span {
@@ -98,4 +114,18 @@
     border: #7b7b7b 2px solid;
     margin-right: 5px;
     background: none;
+}
+
+.scoreTitle {
+    color: white;
+    font-size: 25px !important;
+    margin-top: 30px;
+}
+
+.scoreContainer {
+    display: flex;
+    width: 130px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 25px;
 }
