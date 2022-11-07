@@ -1,34 +1,19 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## 参考にしたデザイン
+https://www.figma.com/community/file/1158400507592362397
 
-First, run the development server:
+## 技術的な点
+・Next13のapp dirを試してみました。
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+・CSS in JSやTailwindCSS使わずに、CSS Modules(Sass)を使用しました。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 今後改良していきたい点
+・app dirを使ったものの、全てClientComponentにしてしまったので、ServerComponentに変更できる箇所から変更していきたい
 
-You can start editing the page by modifying `pages/layout.tsx`. The page auto-updates as you edit the file.
+・バリデーションの処理がもっと複雑になる場合はzodやreact hook formなど導入したい
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## その他
+・良い機会だからSvelteを試してみようと思ってSvelteで書いていたのですが、途中でReact指定を思い出して書き直しました😂
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+・思ったより時間がかかってしまってまだまだ鍛錬が足りないなと思いました。
