@@ -1,10 +1,12 @@
-import styles from "./CoolButton.module.css";
+'use client'
+import styles from "./CoolButton.module.sass";
 
 
 export const CoolButton =
     ({
          text,
-         className, onClick,
+         className,
+         onClick,
          disabled = false
      }: { text: string; className?: string; onClick: () => void; disabled?: boolean }) => {
         return (
