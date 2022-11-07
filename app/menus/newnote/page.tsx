@@ -49,45 +49,45 @@ const NewNote = () => {
     return (
         <>
             <div className={s.menuContainer}>
-                {/*<div className={s.menuItemContainer}>*/}
-                {/*    <div className={s.menuItem}>*/}
-                {/*        <span>Name</span>*/}
-                {/*        <input className={`${isTaskNameValid ? '' : s.invalidForm}`} onInput={onTaskNameHandleChange}*/}
-                {/*               placeholder={'task name here'}></input>*/}
-                {/*    </div>*/}
-                {/*    <div className={s.menuItem}>*/}
-                {/*        <span>Date</span>*/}
-                {/*        <div className={s.dateInput}>*/}
-                {/*            <input autoComplete={'off'} className={`${isMonthValid ? '' : s.invalidForm}`} name={'month'}*/}
-                {/*                   onInput={onDateHandleChange} type={"number"}*/}
-                {/*                   placeholder={'MM'}>*/}
-                {/*            </input>*/}
-                {/*            <input autoComplete={'off'} className={`${isDayValid ? '' : s.invalidForm}`} name={'day'}*/}
-                {/*                   onInput={onDateHandleChange} type={"number"}*/}
-                {/*                   placeholder={'DD'}>*/}
-                {/*            </input>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    <div className={s.menuItem}>*/}
-                {/*        <span>Priority</span>*/}
-                {/*        <div className={s.priorityButtonContainer}>*/}
-                {/*            {priorityButtonClassNames.map((className, index) => {*/}
-                {/*                return (*/}
-                {/*                    <button*/}
-                {/*                        key={index}*/}
-                {/*                        className={`${className} ${priority === index + 1 ? s.priorityButtonActive : ""}`}*/}
-                {/*                        onClick={() => setPriority((index + 1) as 1 | 2 | 3)}>*/}
-                {/*                    </button>*/}
-                {/*                )*/}
-                {/*            })}*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    <div className={s.menuItem}>*/}
-                {/*        <span>Energy costs</span>*/}
-                {/*        <FlashIconGroup/>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
-                {/*<CoolButton text={'SAVE'} className={`${s.saveButton} ${isAllValid ? '' : s.invalidButton}`} onClick={addTask}/>*/}
+                <div className={s.menuItemContainer}>
+                    <div className={s.menuItem}>
+                        <span>Name</span>
+                        <input className={`${isTaskNameValid ? '' : s.invalidForm}`} onInput={onTaskNameHandleChange}
+                               placeholder={'task name here'}></input>
+                    </div>
+                    <div className={s.menuItem}>
+                        <span>Date</span>
+                        <div className={s.dateInput}>
+                            <input autoComplete={'off'} className={`${isMonthValid ? '' : s.invalidForm}`} name={'month'}
+                                   onInput={onDateHandleChange} type={"number"}
+                                   placeholder={'MM'}>
+                            </input>
+                            <input autoComplete={'off'} className={`${isDayValid ? '' : s.invalidForm}`} name={'day'}
+                                   onInput={onDateHandleChange} type={"number"}
+                                   placeholder={'DD'}>
+                            </input>
+                        </div>
+                    </div>
+                    <div className={s.menuItem}>
+                        <span>Priority</span>
+                        <div className={s.priorityButtonContainer}>
+                            {priorityButtonClassNames.map((className, index) => {
+                                return (
+                                    <button
+                                        key={index}
+                                        className={`${className} ${priority === index + 1 ? s.priorityButtonActive : ""}`}
+                                        onClick={() => setPriority((index + 1) as 1 | 2 | 3)}>
+                                    </button>
+                                )
+                            })}
+                        </div>
+                    </div>
+                    <div className={s.menuItem}>
+                        <span>Energy costs</span>
+                        <FlashIconGroup/>
+                    </div>
+                </div>
+                <CoolButton text={'SAVE'} className={`${s.saveButton} ${isAllValid ? '' : s.invalidButton}`} onClick={addTask}/>
             </div>
         </>
     )
