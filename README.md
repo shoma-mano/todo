@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 https://www.figma.com/community/file/1158400507592362397
 
 ## VercelにデプロイしたURL
-todo-swart-one.vercel.app
+https://todo-swart-one.vercel.app
 
 ## 技術的な点
 ・Next13のapp dirを試してみました。
