@@ -9,6 +9,7 @@ import { readWriteTodoListAtom, todoListAtom } from "../../../store/todoAtom";
 import { useRouter } from "next/navigation";
 import { useFlashIconGroup } from "../../../components/FlashIconGroup/useFlashIconGroup";
 import { FlashIcon } from "../../../components/Icon/FlashIcon";
+import Link from "next/link";
 
 const Note = () => {
     const [todoList, setTodoList] = useAtom(readWriteTodoListAtom);
@@ -75,6 +76,7 @@ const Note = () => {
                     }
                     </span>
                 </div>
+                <Link href={'/menus/newnote'}></Link>
             </div>
         </>
     );

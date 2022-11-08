@@ -7,6 +7,7 @@ import { CoolButton } from "../../../components/CoolButton/CoolButton";
 import { useRouter } from "next/navigation";
 import { useForm } from "./useForm";
 import { useFlashIconGroup } from "../../../components/FlashIconGroup/useFlashIconGroup";
+import Link from "next/link";
 
 const NewNote = () => {
     const [todoList, setTodoList] = useAtom(readWriteTodoListAtom);
@@ -88,6 +89,7 @@ const NewNote = () => {
                     </div>
                 </div>
                 <CoolButton text={'SAVE'} className={`${s.saveButton} ${isAllValid ? '' : s.invalidButton}`} onClick={addTask}/>
+                <Link href={'/menus/note'}></Link>
             </div>
         </>
     )
